@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: 'demo-server'
+  security:
+    user:
+      name: user
+      password: password
+  
+  datasource:
+    url: 'jdbc:mysql://localhost:3306/demo?createDatabaseIfNotExist=true&serverTimezone=UTC'
+    username: 'root'
+    password: 'password'
+
+  jpa:
+    open-in-view: true # registers an EntityManager to the current thread, remain until web request completes
+    properties:
+      hibernate:
+        show_sql: false
+        use_sql_comments: false
+        format_sql: false
+        general_statistics: false
+
+  liquibase:
+    change-log: classpath:/database/changelog-master.yml
+    drop-first: true
