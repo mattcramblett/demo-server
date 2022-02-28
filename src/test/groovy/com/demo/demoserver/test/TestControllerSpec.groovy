@@ -1,4 +1,4 @@
-package com.demo.demoserver
+package com.demo.demoserver.test
 
 import com.demo.demoserver.data.entity.TestEntity
 import com.demo.demoserver.data.repository.TestRepository
