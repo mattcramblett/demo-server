@@ -22,6 +22,12 @@ class TestControllerSpec extends Specification {
 
     def "when get is performed the objects are read from the database"() {
         given: "some arbitrary sample data"
+//        TestEntity stub = Stub({
+//            getId() >> 1
+//            getName() >> "test stub"
+//            isActive() >> false
+//            getTime() >> Instant.EPOCH
+//        })
         def data = [
                 new TestEntity(1L, "a", true, Instant.now()),
                 new TestEntity(2L, "b", false, Instant.now()),
